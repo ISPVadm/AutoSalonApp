@@ -1,0 +1,20 @@
+﻿<Window x:Class="AutoSalonApp.DashboardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Рабочая область" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Background="#f0f0f0" Margin="5">
+            <TextBlock x:Name="TbUserInfo" Margin="10" FontWeight="Bold" TextWrapping="Wrap"/>
+            <Button Content="Обновить таблицу" Margin="10" Height="30" Click="BtnSales_Click"/>
+            <Button x:Name="BtnAddSale" Content="Оформить продажу" Margin="10" Height="30" Click="BtnAddSale_Click" Visibility="Collapsed"/>
+            <Button Content="Выйти" Margin="10" Height="30" Click="BtnExit_Click"/>
+        </StackPanel>
+
+              <DataGrid x:Name="MainDataGrid" Grid.Column="1" Margin="10" AutoGenerateColumns="True" IsReadOnly="True"/>
+    </Grid>
+</Window>
